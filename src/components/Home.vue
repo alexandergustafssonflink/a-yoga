@@ -1,0 +1,114 @@
+<template>
+<section id="home">
+	<div class="header-container">
+		<img class="header-img" src="@/assets/header-v2.jpg" alt="">
+		<img class="linear-border" src="@/assets/linear-header.png" alt="">
+	</div>
+	<div class="main">
+		<div class="upper">
+			<img class="olive-branch" src="@/assets/olive-branch-left.svg" alt="">
+			<div class="description">
+				<h1>Yogaklasser för dig<br> som du är <br> för att nå ditt mål</h1>
+				<img src="@/assets/lotus-side.png" alt="">
+			</div>
+			<img class="olive-branch" src="@/assets/olive-branch.svg" alt="">
+		</div>
+		<div class="lower">
+			<div class="img-wrapper"><img src="@/assets/bridge.png" alt=""></div>
+			<div class="img-wrapper"><img src="@/assets/lotus.jpg" alt=""></div>
+			<div class="img-wrapper"><img src="@/assets/feet-in-air.png" alt=""></div>
+		</div>
+	</div>
+</section>
+</template>
+
+<script>
+export default {
+  name: 'Home',
+  props: {
+    // msg: String
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+#home {
+  height: 190vh; 
+  width: 100vw; 
+  background-color: #F6F5F3; 
+}
+
+.header-container {
+	width: 100%; 
+	height: 100vh; 
+	position: relative; 
+}
+
+.linear-border {
+	position: absolute;
+	bottom: 0px; 
+	left: 0px;
+	width: 100%; 
+}
+
+.header-img {
+	width: 100%; 
+	height: 100%; 
+	object-fit: cover;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 90vh; 
+}
+
+.upper {
+	display: flex; 
+	justify-content: space-between; 
+	width: 100%; 
+}
+
+.description {
+	position: relative; 
+	align-items: center; 
+}
+
+
+.description h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Satisfy';
+	color: var(--purple); 
+	font-size: 36px; 
+}
+
+.olive-branch {
+	width: 200px; 
+}
+
+.lower {
+	display: flex; 
+	justify-content: space-between; 
+	margin-top: 50px; 
+	width: 100%; 
+}
+
+.img-wrapper {
+	width: 32%; 
+	height: 250px; 
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.img-wrapper img {
+	width: 100%; 
+	height: 100%; 
+	object-fit: cover;
+}
+
+</style>
