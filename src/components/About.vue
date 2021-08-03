@@ -8,7 +8,7 @@
 			<div class="about-text">
 				<h1>Om oss</h1>
 				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-				<button>Kontakta oss</button>
+				<a href="#contact"><button>Kontakta oss</button></a>
 			</div>
 		</div>
 	</div>
@@ -18,7 +18,7 @@
 			<div class="img-wrapper">
 				<img src="@/assets/examensbevis.jpg" alt="">
 			</div>
-			<h1>Isabelle Ahderinne</h1>
+			<h1>Isabel Ahderinne</h1>
 			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
 		</div>
 		<div class="teacher-info">
@@ -58,6 +58,7 @@ export default {
 	top: -120px; 
 	left: -100px; 
 	width: 400px;
+	z-index: 1
 }
 
 .mandala-middle {
@@ -118,6 +119,8 @@ export default {
 .upper {
 		display: flex;
 	justify-content: center; 
+	z-index: 2; 
+	position: relative;
 }
 
 .lower {
@@ -163,6 +166,71 @@ export default {
 	bottom: -8%; 
 	left: -10%; 
 	width: 500px; 
+	z-index: 1; 
 }
 
+@media only screen and (max-width: 800px) {
+  #about {
+    height: auto; 
+  }
+
+  .upper .img-wrapper {
+	width: 100%;
+	height: 300px; 
+	display: none; 
+  }
+
+
+  .inner-upper {
+	right: 0%; 
+	margin-top: 0px; 
+  }
+
+.about-text {
+	position: relative; 
+	width: auto; 
+	padding: 15px; 
+	text-align: center; 
+	top: 0%; 
+	left: 0%; 
+	margin-top: 50px; 
+}
+
+.mandala-top {
+	width: 250px; 
+}
+
+.mandala-middle {
+	width: 300px; 
+	top: 21%; 
+}
+
+.lower {
+	margin-top: 50px; 
+	flex-direction: column;
+}
+
+.teacher-info {
+	width: auto; 
+	margin-bottom: 15px; 
+	padding: 30px 10px;  
+	height: auto; 
+}
+
+.mandala-bottom {
+	width: 300px; 
+	bottom: -3%; 
+	left: -15%; 
+}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+	.teacher-info {
+	padding: 50px 30px; 
+	margin-bottom: 50px; 
+}
+	#about  {
+		padding-bottom: 70px; 
+	}
+}
 </style>

@@ -1,10 +1,10 @@
 <template>
 <nav>
 	<ul class="menu-options">
-		<li>Hem</li>
-		<li>Om</li>
-		<li>Event</li>
-		<li>Kontakt</li>
+		<li><a href="#home">Hem</a> </li>
+		<li><a href="#about">Om</a>	</li>
+		<li><a href="#events">Event</a> </li>
+		<li><a href="#contact">Kontakt</a> </li>
 	</ul>
 	<div>
 		<img class="logo" src="@/assets/logo-transparent.png" alt="">
@@ -44,15 +44,33 @@ ul {
 	width: 30%; 
 }
 
+a {
+	text-decoration: none;
+	color: var(--purple); 
+	transition: 0.3s ease;
+}
+
 li {
 	font-weight: 600; 
 	color: #501B38; 
+	
+}
+
+a:hover {
+	color: var(--darkbeige); 
 }
 
 
 .logo {
 	height: 50px; 
 	margin-right: 50px; 
+}
+
+
+@media only screen and (max-width: 800px) {
+  nav {
+    display: none; 
+  }
 }
 
 </style>

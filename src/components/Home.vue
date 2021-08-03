@@ -2,6 +2,7 @@
 <section id="home">
 	<div class="header-container">
 		<img class="header-img" src="@/assets/header-v2.jpg" alt="">
+		<img class="logo" src="@/assets/logo-transparent.png" alt="">
 		<img class="linear-border" src="@/assets/linear-header.png" alt="">
 	</div>
 	<div class="main">
@@ -15,7 +16,7 @@
 		</div>
 		<div class="lower">
 			<div class="img-wrapper"><img src="@/assets/bridge.png" alt=""></div>
-			<div class="img-wrapper"><img src="@/assets/lotus.jpg" alt=""></div>
+			<div class="img-wrapper"><img src="@/assets/feet-over-head.png" alt=""></div>
 			<div class="img-wrapper"><img src="@/assets/feet-in-air.png" alt=""></div>
 		</div>
 	</div>
@@ -37,6 +38,10 @@ export default {
   height: 190vh; 
   width: 100vw; 
   background-color: #F6F5F3; 
+}
+
+#home .logo {
+	display: none; 
 }
 
 .header-container {
@@ -97,6 +102,8 @@ export default {
 	justify-content: space-between; 
 	margin-top: 50px; 
 	width: 100%; 
+	z-index: 2; 
+	padding-bottom: 50px; 
 }
 
 .img-wrapper {
@@ -111,4 +118,61 @@ export default {
 	object-fit: cover;
 }
 
+
+@media only screen and (max-width: 600px) {
+	#home {
+		height: auto; 
+	}
+
+	.description h1 {
+		font-size: 30px; 
+	}
+
+	.header-container {
+		height: 60vh; 
+		position: relative
+	}
+
+	#home .logo {
+		display: block;
+		position: absolute;  
+		top: 15%; 
+		left: 33%; 
+}
+	.upper {
+		width: auto; 
+	}
+	.main {
+		height: auto; 
+	}
+	.lower {
+		flex-direction: column;
+		margin-top: 15px; 
+	}
+
+	.lower .img-wrapper {
+		width: 100%; 
+		margin-bottom: 15px; 
+	}
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+	#home {
+		height: auto; 
+		padding-bottom: 100px; 
+	}
+  .upper {
+	width: auto; 
+	margin-top: 50px; 
+  }
+
+  .main {
+	height: auto; 
+  }
+
+  .olive-branch {
+	display: none; 
+  }
+}
 </style>
