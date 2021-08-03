@@ -5,7 +5,7 @@
 	<div class="upper">
 		<div class="inner-upper">
 			<div class="img-wrapper"><img src="@/assets/island.png" alt=""></div>
-			<div class="about-text">
+			<div data-aos="fade-left" class="about-text">
 				<h1>Om oss</h1>
 				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
 				<a href="#contact"><button>Kontakta oss</button></a>
@@ -15,14 +15,14 @@
 	<img class="mandala-middle" src="@/assets/mandala.png" alt="">
 	<div class="lower">
 		<div class="teacher-info">
-			<div class="img-wrapper">
+			<div class="img-wrapper" data-aos="zoom-in">
 				<img src="@/assets/examensbevis.jpg" alt="">
 			</div>
 			<h1>Isabel Ahderinne</h1>
 			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
 		</div>
 		<div class="teacher-info">
-			<div class="img-wrapper">
+			<div class="img-wrapper" data-aos="zoom-in">
 				<img src="@/assets/header-v2.jpg" alt="">
 			</div>
 			<h1>Lottie Ahderinne</h1>

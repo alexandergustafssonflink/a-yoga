@@ -16,6 +16,10 @@ import MobileMenu from './components/MobileMenu.vue';
 import About from './components/About.vue';
 import Events from './components/Events.vue';
 import Footer from './components/Footer.vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+// ..
+AOS.init();
 
 export default {
   name: 'App',
@@ -33,6 +37,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway&family=Satisfy&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'); 
+
 
 * {
 	padding: 0; 

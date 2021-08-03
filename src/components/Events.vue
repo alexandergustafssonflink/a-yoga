@@ -3,7 +3,7 @@
 	<div class="main">
 		<h1>Events</h1>
 		<div class="events-list">
-			<div class="event-card">
+			<div class="event-card" data-aos="fade-up">
 				<div class="img-wrapper">
 					<img src="@/assets/siluett.jpg" alt="">
 				</div>
@@ -16,7 +16,7 @@
 					<button>Mer info <i class="fas fa-chevron-right"></i></button>
 				</div>
 			</div>
-			<div class="event-card">
+			<div class="event-card" data-aos="fade-up">
 				<div class="img-wrapper">
 					<img src="@/assets/siluett.jpg" alt="">
 				</div>
@@ -29,7 +29,7 @@
 					<button>Mer info <i class="fas fa-chevron-right"></i></button>
 				</div>
 			</div>
-			<div class="event-card">
+			<div class="event-card" data-aos="fade-up">
 				<div class="img-wrapper">
 					<img src="@/assets/siluett.jpg" alt="">
 				</div>

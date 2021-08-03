@@ -15,9 +15,9 @@
 			<img class="olive-branch" src="@/assets/olive-branch.svg" alt="">
 		</div>
 		<div class="lower">
-			<div class="img-wrapper"><img src="@/assets/bridge.png" alt=""></div>
-			<div class="img-wrapper"><img src="@/assets/feet-over-head.png" alt=""></div>
-			<div class="img-wrapper"><img src="@/assets/feet-in-air.png" alt=""></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/bridge.png" alt=""></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/feet-over-head.png" alt=""></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/feet-in-air.png" alt=""></div>
 		</div>
 	</div>
 </section>
