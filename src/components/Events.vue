@@ -106,7 +106,7 @@ export default {
 
 .event-card .img-wrapper {
 	width: 100%; 
-	height: 150px; 
+	height: 200px; 
 }
 
 .img-wrapper img {
@@ -152,7 +152,7 @@ export default {
 	}
 	.events-list {
 		flex-direction: column; 
-		margin-top: 20px; 
+		margin: 20px 0px 0px 0px;  
 		align-items: center;
 		padding-bottom: 20px; 
 	}
