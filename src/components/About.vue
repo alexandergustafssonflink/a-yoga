@@ -169,6 +169,10 @@ export default {
 	z-index: 1; 
 }
 
+button:hover {
+	cursor: pointer;
+}
+
 @media only screen and (max-width: 800px) {
   #about {
     height: auto; 

@@ -3,45 +3,19 @@
 	<div class="main">
 		<h1>Events</h1>
 		<div class="events-list">
-			<div class="event-card" data-aos="fade-up">
+			<div v-for="event in events" :key="event.title" class="event-card" data-aos="fade-up">
 				<div class="img-wrapper">
-					<img src="@/assets/siluett.jpg" alt="">
+					<img :src="event.fields.image.fields.file.url" alt="">
 				</div>
 				<div class="event-info">
-					<div class="event-info-inner">
-						<h3>Yoga grejer</h3>
-						<h5>24e juni kl 18:00</h5>
-						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+					<div class="event-info-inner"> 
+						
+						<h3>{{event.fields.title}}</h3>
+						<h5>{{event.fields.date}}</h5>
+						<p>{{event.fields.shortDescription}}</p>
 					</div>
 					<button>Mer info <i class="fas fa-chevron-right"></i></button>
 				</div>
-			</div>
-			<div class="event-card" data-aos="fade-up">
-				<div class="img-wrapper">
-					<img src="@/assets/siluett.jpg" alt="">
-				</div>
-				<div class="event-info">
-					<div class="event-info-inner">
-						<h3>Yoga grejer</h3>
-						<h5>24e juni kl 18:00</h5>
-						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-					</div>
-					<button>Mer info <i class="fas fa-chevron-right"></i></button>
-				</div>
-			</div>
-			<div class="event-card" data-aos="fade-up">
-				<div class="img-wrapper">
-					<img src="@/assets/siluett.jpg" alt="">
-				</div>
-				<div class="event-info">
-					<div class="event-info-inner">
-						<h3>Yoga grejer</h3>
-						<h5>24e juni kl 18:00</h5>
-						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-					</div>
-					<button>Mer info <i class="fas fa-chevron-right"></i></button>
-				</div>
-				
 			</div>
 		</div>
 	</div>
@@ -50,18 +24,40 @@
 </template>
 
 <script>
+
+import client from "@/contentful.js";
+
+
+	client
+      .getEntries({
+        content_type: "event",
+      }).then((entries) => {
+	return entries.items; 
+})
+
 export default {
-  name: 'Events',
-  props: {
-    // msg: String
-  }
-}
+  name: "Events",
+  data() {
+    return {
+      events: [],
+    };
+  },
+  mounted() {
+    client
+      .getEntries({
+        content_type: "event",
+      }).then((entries) => {
+	this.events = entries.items;
+})
+  },
+};
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #events {
-  height: 90vh; 
+  padding-bottom: 100px; 
   width: 100vw; 
   background-color: #F6F5F3; 
   position: relative;
@@ -91,8 +87,9 @@ export default {
 
 .events-list {
 	display: flex;
-	margin-top: 50px; 
+	margin: 50px -30px 0px -30px; 
 	justify-content: space-between;
+	flex-wrap: wrap;
 	/* position: relative;
 	z-index: 2000;  */
 }
@@ -100,6 +97,7 @@ export default {
 	width: 300px; 
 	height: 400px; 
 	background: var(--beige);
+	margin: 30px; 
 	text-align: left;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 	display: flex;
@@ -164,7 +162,7 @@ export default {
 	}
 
 	.event-card {
-		margin-bottom: 20px; 
+		margin: 0px 0px 20px 0px; 
 		width: auto; 
 		max-width: 400px;
 	}
