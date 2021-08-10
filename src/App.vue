@@ -3,8 +3,9 @@
 	<Home />
 	<Menu />
 	<MobileMenu />
-	<About />
-	<Events />
+	<About :teachers="teachers" :about="about" /> 
+	<Offer />
+	<!-- <Events /> -->
 	<Footer />
   </div>
 </template>
@@ -14,9 +15,11 @@ import Home from './components/Home.vue';
 import Menu from './components/Menu.vue';
 import MobileMenu from './components/MobileMenu.vue';
 import About from './components/About.vue';
-import Events from './components/Events.vue';
+// import Events from './components/Events.vue';
+import Offer from './components/Offer.vue';
 import Footer from './components/Footer.vue';
 import AOS from 'aos';
+import client from "@/contentful.js";
 import 'aos/dist/aos.css'; 
 // ..
 AOS.init();
@@ -28,8 +31,25 @@ export default {
 	Menu,
 	MobileMenu,
 	About,
-	Events,
+	Offer,
+	// Events,
 	Footer
+  },
+  data() {
+    return {
+    teachers: [
+	],
+	about: ""
+    };
+  },
+  mounted() {
+    client
+      .getEntries({
+        content_type: "sections",
+      }).then((entries) => { 
+		this.teachers = entries.items.filter(e => e.fields.type == "teacher");
+		this.about = entries.items.filter(e => e.fields.type == "om" )
+})
   }
 }
 </script>

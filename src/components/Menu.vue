@@ -3,7 +3,7 @@
 	<ul class="menu-options">
 		<li><a href="#home">Hem</a> </li>
 		<li><a href="#about">Om</a>	</li>
-		<li><a href="#events">Event</a> </li>
+		<li><a href="#offer">Vi erbjuder</a> </li>
 		<li><a href="#contact">Kontakt</a> </li>
 	</ul>
 	<div>

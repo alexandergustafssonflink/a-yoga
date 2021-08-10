@@ -28,12 +28,12 @@
 import client from "@/contentful.js";
 
 
-	client
-      .getEntries({
-        content_type: "event",
-      }).then((entries) => {
-	return entries.items; 
-})
+// 	client
+//       .getEntries({
+//         content_type: "event",
+//       }).then((entries) => {
+// 	return entries.items; 
+// })
 
 export default {
   name: "Events",

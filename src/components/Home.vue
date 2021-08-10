@@ -1,8 +1,8 @@
 <template>
 <section id="home">
 	<div class="header-container">
-		<img class="header-img" src="@/assets/header-v2.jpg" alt="">
-		<img class="logo" src="@/assets/logo-transparent.png" alt="">
+		<img class="header-img" src="@/assets/header-with-logo-min.jpg" alt="">
+		<!-- <img class="logo" src="@/assets/logo-transparent.png" alt=""> -->
 		<img class="linear-border" src="@/assets/linear-header.png" alt="">
 	</div>
 	<div class="main">
@@ -15,9 +15,9 @@
 			<img class="olive-branch" src="@/assets/olive-branch.svg" alt="">
 		</div>
 		<div class="lower">
-			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/bridge.png" alt=""></div>
-			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/feet-over-head.png" alt=""></div>
-			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/feet-in-air.png" alt=""></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/yoga-mat-purple-min.jpg" alt=""></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/lotus-on-cliff-min.png" alt=""></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/back-with-shadow-min.jpg" alt=""></div>
 		</div>
 	</div>
 </section>

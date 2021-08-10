@@ -4,30 +4,24 @@
 <div class="main">
 	<div class="upper">
 		<div class="inner-upper">
-			<div class="img-wrapper"><img src="@/assets/island.png" alt=""></div>
+			<div class="img-wrapper"><img src="@/assets/ocean-pose.jpg" alt=""></div>
 			<div data-aos="fade-left" class="about-text">
-				<h1>Om oss</h1>
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+				<h1>{{about[0].fields.header}}</h1>
+				<RichTextRenderer :document="about[0].fields.text" />
 				<a href="#contact"><button>Kontakta oss</button></a>
 			</div>
 		</div>
 	</div>
 	<img class="mandala-middle" src="@/assets/mandala.png" alt="">
 	<div class="lower">
-		<div class="teacher-info">
+		<div class="teacher-info" v-for="teacher in teachers"  :key="teacher.fields.header">
 			<div class="img-wrapper" data-aos="zoom-in">
-				<img src="@/assets/examensbevis.jpg" alt="">
+				<img :src="teacher.fields.image.fields.file.url" alt="">
 			</div>
-			<h1>Isabel Ahderinne</h1>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+			<h1>{{teacher.fields.header}}</h1>
+			<RichTextRenderer :document="teacher.fields.text" />
 		</div>
-		<div class="teacher-info">
-			<div class="img-wrapper" data-aos="zoom-in">
-				<img src="@/assets/header-v2.jpg" alt="">
-			</div>
-			<h1>Lottie Ahderinne</h1>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
-		</div>
+	
 	</div>
 	<img class="mandala-bottom" src="@/assets/mandala.png" alt="">
 </div>
@@ -36,20 +30,38 @@
 </template>
 
 <script>
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import RichTextRenderer from 'contentful-rich-text-vue-renderer';
+
 export default {
+	components: {
+   RichTextRenderer
+  },
   name: 'About',
-  props: {
-    // msg: String
-  }
+	props: ["about", "teachers"],
+	methods: {
+    formatContent(content) {
+		console.log(content);
+		let html = documentToHtmlString(content)
+		return html
+    },
+	formatHtml() {
+		let richTextFields = document.querySelectorAll(".rich-text")
+		console.log(richTextFields);
+		richTextFields.forEach(f => f.innerHTML = "hej")
+	}
+  },
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #about {
-	height: 180vh; 
+	/* height: 200vh;  */
 	background-color: var(--beige); 
 	position: relative; 
+	padding-bottom: 100px; 
 	/* overflow-x: hidden;  */
 }
 
@@ -75,8 +87,8 @@ export default {
 	justify-content: center;  */
 }
 .upper .img-wrapper {
-	width: 30vw; 
-	height: 30vw; 
+	width: 40vw; 
+	height: 40vw; 
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -91,20 +103,28 @@ export default {
 	background: var(--purple);
 	color: white; 
 	position: absolute; 
-	width: 100%; 
+	width: 90%; 
 	padding: 30px; 
 	text-align: left;
 	top: 12%;
-	left: 70%; 
+	left: 68%; 
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.about-text a {
+	color: white; 
+	
+}
 .about-text button {
 	border: none;
 	padding: 10px 15px;  
 	background-color: var(--beige); 
 	color: var(--purple); 
 	margin-top: 20px; 
+}
+
+.about-text p {
+	margin-bottom: 12px; 
 }
 
 .about-text h1 {
@@ -131,7 +151,7 @@ export default {
 
 .teacher-info {
 	width: 400px; 
-	height: 600px; 
+	min-height: 730px; 
 	background: #F6F5F3;
 	display: flex;
 	flex-direction: column;
@@ -163,7 +183,7 @@ export default {
 
 .mandala-bottom {
 	position: absolute;
-	bottom: -8%; 
+	bottom: -6%; 
 	left: -10%; 
 	width: 500px; 
 	z-index: 1; 
@@ -176,6 +196,7 @@ button:hover {
 @media only screen and (max-width: 800px) {
   #about {
     height: auto; 
+	padding-bottom: 50px; 
   }
 
   .upper .img-wrapper {
@@ -223,7 +244,7 @@ button:hover {
 
 .mandala-bottom {
 	width: 300px; 
-	bottom: -3%; 
+	bottom: -2%; 
 	left: -15%; 
 }
 }
