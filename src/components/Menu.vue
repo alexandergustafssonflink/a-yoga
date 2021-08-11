@@ -7,7 +7,7 @@
 		<li><a href="#contact">Kontakt</a> </li>
 	</ul>
 	<div>
-		<img class="logo" src="@/assets/logo-transparent.png" alt="">
+		<img class="logo" src="@/assets/logo-transparent.png" alt="logo">
 	</div>
 </nav>
 </template>

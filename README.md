@@ -1,24 +1,8 @@
 # a-yoga
 
-## Project setup
-```
-npm install
-```
+<img src="https://media.giphy.com/media/xUPGcyi4YxcZp8dWZq/giphy.gif" width="100%">
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Site made for Ahderinne yoga in vue.js and contentful. 
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Visit the site @ https://a-yoga.se
