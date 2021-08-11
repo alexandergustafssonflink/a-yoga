@@ -4,7 +4,7 @@
 <div class="main">
 	<div class="upper">
 		<div class="inner-upper">
-			<div class="img-wrapper"><img src="@/assets/ocean-pose.jpg" alt=""></div>
+			<div class="img-wrapper"><img src="@/assets/ocean-pose.jpg" alt="ocean pose"></div>
 			<div data-aos="fade-left" class="about-text">
 				<h1>{{about[0].fields.header}}</h1>
 				<RichTextRenderer :document="about[0].fields.text" />
@@ -12,7 +12,7 @@
 			</div>
 		</div>
 	</div>
-	<img class="mandala-middle" src="@/assets/mandala.png" alt="">
+	<img class="mandala-middle" src="@/assets/mandala.png" alt="mandala">
 	<div class="lower">
 		<div class="teacher-info" v-for="teacher in teachers"  :key="teacher.fields.header">
 			<div class="img-wrapper" data-aos="zoom-in">
@@ -23,7 +23,7 @@
 		</div>
 	
 	</div>
-	<img class="mandala-bottom" src="@/assets/mandala.png" alt="">
+	<img class="mandala-bottom" src="@/assets/mandala.png" alt="mandala">
 </div>
 
 </section>

@@ -7,7 +7,7 @@
 		<a class="facebook" href="https://www.facebook.com/ahderinneyoga"><p><i class="fab fa-facebook"></i> Ahderinne Yoga</p></a>
 	</div>
 	<div class="logo-wrapper">
-		<img class="logo" src="@/assets/logo-transparent.png" alt="">
+		<img class="logo" src="@/assets/logo-transparent.png" alt="logo">
 	</div>
 </footer>
 </template>

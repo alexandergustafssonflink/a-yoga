@@ -1,8 +1,8 @@
 <template>
 <nav class="mobile-menu">
 	<div class="hamburger-menu" @click="mobileSliderOpen = !mobileSliderOpen" >
-		<img src="@/assets/sitting-pose.svg" class="hamburger" :class="mobileSliderOpen ? 'hide' : 'show'" alt="">
-		<img src="@/assets/cross-pose.svg" class="hamburger cross" :class="mobileSliderOpen ? 'show' : 'hide'" alt="">
+		<img alt="sitting yoga pose" src="@/assets/sitting-pose.svg" class="hamburger" :class="mobileSliderOpen ? 'hide' : 'show'">
+		<img alt="cross yoga pose" src="@/assets/cross-pose.svg" class="hamburger cross" :class="mobileSliderOpen ? 'show' : 'hide'">
 	</div>
 	<div class="mobile-slider" :class="mobileSliderOpen ? 'active' : ''">
 		<ul class="menu-options" @click="mobileSliderOpen = false">

@@ -1,23 +1,23 @@
 <template>
 <section id="home">
 	<div class="header-container">
-		<img class="header-img" src="@/assets/header-with-logo-min.jpg" alt="">
+		<img class="header-img" src="@/assets/header-with-logo-min.jpg" alt="header image with logo">
 		<!-- <img class="logo" src="@/assets/logo-transparent.png" alt=""> -->
-		<img class="linear-border" src="@/assets/linear-header.png" alt="">
+		<img class="linear-border" src="@/assets/linear-header.png" alt="linear">
 	</div>
 	<div class="main">
 		<div class="upper">
-			<img class="olive-branch" src="@/assets/olive-branch-left.svg" alt="">
+			<img class="olive-branch" src="@/assets/olive-branch-left.svg" alt="olive branch">
 			<div class="description">
 				<h1>Yogaklasser för dig<br> som du är <br> för att nå ditt mål</h1>
-				<img src="@/assets/lotus-side.png" alt="">
+				<img src="@/assets/lotus-side.png" alt="lotus">
 			</div>
-			<img class="olive-branch" src="@/assets/olive-branch.svg" alt="">
+			<img class="olive-branch" src="@/assets/olive-branch.svg" alt="olive branch">
 		</div>
 		<div class="lower">
-			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/yoga-mat-purple-min.jpg" alt=""></div>
-			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/lotus-on-cliff-min.png" alt=""></div>
-			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/back-with-shadow-min.jpg" alt=""></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/yoga-mat-purple-min.jpg" alt="yoga mat"></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/lotus-on-cliff-min.png" alt="lotus pose on cliff"></div>
+			<div data-aos="fade-up" class="img-wrapper"><img src="@/assets/back-with-shadow-min.jpg" alt="girl with shadow"></div>
 		</div>
 	</div>
 </section>

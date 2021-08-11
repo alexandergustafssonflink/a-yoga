@@ -5,7 +5,7 @@
 		<div class="events-list">
 			<div v-for="event in events" :key="event.title" class="event-card" data-aos="fade-up">
 				<div class="img-wrapper">
-					<img :src="event.fields.image.fields.file.url" alt="">
+					<img :src="event.fields.image.fields.file.url" alt="event-image">
 				</div>
 				<div class="event-info">
 					<div class="event-info-inner"> 
@@ -19,7 +19,7 @@
 			</div>
 		</div>
 	</div>
-	<img class="lotus-colored" src="@/assets/lotus-colored.svg" alt="">
+	<img class="lotus-colored" src="@/assets/lotus-colored.svg" alt="lotus">
 </section>
 </template>
 

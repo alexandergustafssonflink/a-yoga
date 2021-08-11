@@ -10,10 +10,10 @@
 			<p>Varma klippor och ljudet av vågor på Femöre. Kontakta oss för mer info eller varför inte prenumerera på vårt nyhetsbrev som bara skickas 3 ggr per år.<br> <a href="mailto:kontakt@a-yoga.se"> Klicka här </a> och skriv “nyhetsbrev” i mailet.</p>
 		</div>
 		<div data-aos="fade-left" class="img-wrapper">
-			<img src="@/assets/meditation.jpg" alt="">
+			<img src="@/assets/meditation.jpg" alt="meditation">
 		</div>
 	</div>
-	<img class="lotus-colored" src="@/assets/lotus-colored.svg" alt="">
+	<img class="lotus-colored" src="@/assets/lotus-colored.svg" alt="lotus">
 </section>
 </template>
 
