@@ -95,6 +95,7 @@ ul {
 li {
 	padding: 10px; 
 	font-weight: 700; 
+	font-size: 20px; 
 }
 
 a {
