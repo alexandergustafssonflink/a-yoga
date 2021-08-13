@@ -78,7 +78,7 @@ export default {
 }
 
 .main {
-	margin: 0px 200px 0px 200px; 
+	margin: 0px 10% 0px 10%; 
 }
 
 p {

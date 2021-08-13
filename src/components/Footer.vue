@@ -25,7 +25,7 @@ export default {
 
 footer {
 	height: 230px; 
-	padding: 50px 200px; 
+	padding: 50px 10%; 
 	display: flex; 
 	justify-content: space-between;
 }
@@ -63,6 +63,10 @@ footer .fab {
 footer .fas {
 	font-size: 26px; 
 	margin-right: 5px; 
+}
+
+.lotus-colored {
+	width: 20%; 
 }
 
 @media only screen and (max-width: 800px) {

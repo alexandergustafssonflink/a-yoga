@@ -171,8 +171,15 @@ export default {
 	height: auto; 
   }
 
-  .olive-branch {
+
+}
+
+@media only screen and (max-width: 1200px) {
+	.olive-branch {
 	display: none; 
+  }
+  .upper {
+	justify-content: center;
   }
 }
 </style>

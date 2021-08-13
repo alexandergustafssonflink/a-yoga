@@ -58,7 +58,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #about {
-	/* height: 200vh;  */
 	background-color: var(--beige); 
 	position: relative; 
 	padding-bottom: 100px; 
@@ -82,13 +81,13 @@ export default {
 }
 
 .main {
-	height: 100%; 
+	/* height: 100%;  */
 	/* display: flex;
 	justify-content: center;  */
 }
 .upper .img-wrapper {
-	width: 40vw; 
-	height: 40vw; 
+	width: 600px; 
+	height: 600px; 
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -106,7 +105,7 @@ export default {
 	width: 90%; 
 	padding: 30px; 
 	text-align: left;
-	top: 12%;
+	top: 7%;
 	left: 68%; 
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -257,5 +256,11 @@ button:hover {
 	#about  {
 		padding-bottom: 70px; 
 	}
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1300px) {
+	.teacher-info {
+width: 300px; 
+}
 }
 </style>
