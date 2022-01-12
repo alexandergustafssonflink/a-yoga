@@ -47,6 +47,18 @@ a {
 	color: var(--purple); 
 		display: flex; 
 	align-items: center;
+    transition: 0.3s ease; 
+}
+
+a:hover {
+    color: black; 
+}
+
+a p {
+    transition: 0.3s ease; 
+}
+a p:hover {
+    color: black; 
 }
 p {
 	color: var(--purple); 

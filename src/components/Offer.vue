@@ -122,6 +122,13 @@ export default {
 	/* z-index: 10 */
 	}
 
+    a {
+        transition: 0.3s ease; 
+    }
+
+a:hover {
+    color: var(--purple)
+}
 
 @media only screen and (max-width: 800px) { 
 	.main {

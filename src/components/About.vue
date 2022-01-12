@@ -115,11 +115,19 @@ export default {
 	
 }
 .about-text button {
-	border: none;
-	padding: 10px 15px;  
-	background-color: var(--beige); 
-	color: var(--purple); 
+    color: var(--beige); 
+	background-color: var(--purple); 
+    border: 2px solid var(--beige); 
+    padding: 10px 15px;  
 	margin-top: 20px; 
+    font-size: 1em; 
+    transition: 0.3s ease;
+}
+
+.about-text button:hover {
+    border: 2px solid var(--purple); 
+    background-color: var(--beige); 
+	color: var(--purple);  
 }
 
 .about-text p {
@@ -260,7 +268,7 @@ button:hover {
 
 @media only screen and (min-width: 800px) and (max-width: 1300px) {
 	.teacher-info {
-width: 300px; 
+width: 300px; 	
 }
 }
 </style>
